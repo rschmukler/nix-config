@@ -29,6 +29,15 @@
 
         # The platform the configuration will be used on.
         nixpkgs.hostPlatform = "aarch64-darwin";
+
+        # Custom packages overlay.
+        nixpkgs.overlays = [
+          (final: prev: {
+            local = {
+              cream = prev.callPackage ./modules/cream.nix { };
+            };
+          })
+        ];
       };
     in
     {
