@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  imports = [ ./modules/direnv.nix ];
+  imports = [
+    ./modules/direnv.nix
+    ./modules/email.nix
+  ];
 
   # Common packages used across all systems
   environment.systemPackages = [
@@ -8,7 +11,6 @@
     pkgs.nix-search-cli
     pkgs.local.cream
     pkgs.uv
-    pkgs.himalaya
     pkgs.tmux
     pkgs.difftastic
     pkgs.zoxide
