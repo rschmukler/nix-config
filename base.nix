@@ -12,6 +12,7 @@
     pkgs.local.cream
     pkgs.uv
     pkgs.tmux
+    pkgs.socat
     pkgs.difftastic
     pkgs.zoxide
   ];
