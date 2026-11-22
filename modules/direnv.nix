@@ -11,6 +11,8 @@
   # Make direnv source nix-direnv's direnvrc globally so `use flake` is
   # overridden with the cached version (skips nix evaluation on entry when
   # nothing has changed).
+  environment.variables.DIRENV_CONFIG = "/etc/direnv";
+
   environment.etc."direnv/direnvrc".text = ''
     source ${pkgs.nix-direnv}/share/nix-direnv/direnvrc
   '';
